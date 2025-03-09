@@ -1,0 +1,31 @@
+git init : this will initialise empty repository in your folder
+any folders which has . it is hidden folder to get all of them use ls -a a means all
+git add :, git add . : dot will add all the modified files in the directory
+git status :
+git commit -m "write commit message"
+git log :
+git revert -n <commit-hash> : The -n or --no-commit flag applies the revert without committing the changes
+                               immediately.This allows you to make additional modifications before manually committing
+git reset <commit-hash> --hard : --hard is for reseting files too, if we don't use hard it rest only commits.
+git revert -n HEAD: reverts the latest commit
+git reset HEAD~1 : ~1 means pervious of the HEAD
+git branch <branch_name> :
+git branch :
+git checkout <branch_name> :
+git merge <branch_name> :
+
+first we need to create repo in github, then execute the commands
+git remote add origin https://github.com/SaiSandeepSrirangapuram/Quotebooks.git
+git remote -v
+git push origin :master pushes only master branch
+git config --global credential.helper store : stores my credens
+git push --all origin : pushes all branches
+git push -u origin master : now it always tracks the master, we can just give git push.
+
+git clone <url> : makes a copy of remote repo in our local repo and then we can do push/pull if we access.
+git fork : is forking or getting some other person repo into your github so you can do your modifications as you don't permission for other user repos.
+touch .gitignore : if we want to ignore some files to commit to remote for ex: creadential file we need to mention that file name in .gitignore file. So it won't be commited/pushed to remote.
+git stash save : if you don't want commit your changes, but want to pull latest from remote we can use stash save and then pull the repos. when you use stash it will commit your local changes in some place and after pulling lastest remote you can get back your changes by command git stash pop
+git stash pop : to get back your local changes after pulling the latest remote
+git rebase master : this should be excuted in child branches, and to get latest changes fo master we use it and after doing rebase our base commit will be shifted to lastes commit of master
+git squash : if you want squash multiple commits as their are small and no need of separates commits we can use squash to combine all three commits to one commit, help in readability of commits.
